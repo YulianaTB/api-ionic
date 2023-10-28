@@ -1,0 +1,49 @@
+<div class="formulario-container">
+
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/login"></ion-back-button>
+  </ion-buttons>
+  <h2>Formulario de inscripción</h2>
+  <form [formGroup]="formData" (ngSubmit)="guardarDatos()">
+    <ion-list>
+      <ion-item>
+        <ion-input labelPlacement="floating" formControlName="documento">
+          <div slot="label">Documento <ion-text color="danger">(Required)</ion-text></div>
+          <input type="text" formControlName="documento">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="floating" formControlName="nombre">
+          <div slot="label">Nombre <ion-text color="danger">(Required)</ion-text></div>
+          <input type="text" formControlName="nombre">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="floating" formControlName="telefono">
+          <div slot="label">Telefono <ion-text color="danger">(Required)</ion-text></div>
+          <input type="text" formControlName="telefono">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="floating" formControlName="comercio">
+          <div slot="label">Comercio <ion-text color="danger">(Required)</ion-text></div>
+          <input type="text" formControlName="comercio">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="floating" formControlName="correo">
+          <div slot="label">Correo <ion-text color="danger">(Required)</ion-text></div>
+          <input type="text" formControlName="correo">
+        </ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button type="submit">Guardar</ion-button>
+    <ion-button [routerLink]="'/lista'">Listado</ion-button>
+  </form>
+
+
+</div>
